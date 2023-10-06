@@ -8,7 +8,10 @@
 <body>
 
     
-    <p>Welcome back: ${cookie.userEmail.value}</p>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <c:if test = "${cookie.userEmail.value != null}">
+        <p>Welcome back: ${cookie.userEmail.value}</p>
+    </c:if>
   
 <h1>List of albums</h1>
 
